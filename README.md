@@ -26,6 +26,7 @@ submission/
 │
 
 ├── solution_presentation.pptx
+
 │   └── Solution presentation covering the problem, approach,
 │       synthetic-data generation, localization, experiments,
 │       results, runtime and failure analysis.
