@@ -1,0 +1,409 @@
+{
+  "seed": "28824834790679470146031688902833643142",
+  "technology": "DRAM",
+  "architecture": "sparse large-pitch DRAM banks",
+  "architecture_id": 3,
+  "reference_size": [
+    1000,
+    1000
+  ],
+  "wide_search_size": [
+    1000,
+    1000
+  ],
+  "physical_layout_size": [
+    10000,
+    10000
+  ],
+  "physical_scale_ratio": "10:1",
+  "reference_crop_in_physical_layout": [
+    8467,
+    1506,
+    1000,
+    1000
+  ],
+  "reference_expected_location_in_wide_search": [
+    846.7,
+    150.6,
+    100.0,
+    100.0
+  ],
+  "reference_ground_truth_box_xyxy": [
+    847,
+    151,
+    946,
+    250
+  ],
+  "reference_locations_ground_truth_count": 1,
+  "reference_locations_ground_truth_xyxy": [
+    [
+      847,
+      151,
+      946,
+      250
+    ]
+  ],
+  "repetition_increase": {
+    "generated_during_wide_image_creation": false,
+    "reference_count": 1,
+    "locations_wide_xywh": [
+      [
+        846.7,
+        150.6,
+        100.0,
+        100.0
+      ]
+    ]
+  },
+  "ground_truth_visualization": {
+    "description": "The reference location is outlined in reference_location_ground_truth.png.",
+    "box_format": "xyxy",
+    "box": [
+      847,
+      151,
+      946,
+      250
+    ]
+  },
+  "global_bit_pitch": 131,
+  "global_word_pitch": 158,
+  "intersection_count": 6,
+  "intersection_positions_physical": [
+    [
+      5344,
+      7970
+    ],
+    [
+      7702,
+      3862
+    ],
+    [
+      2462,
+      8602
+    ],
+    [
+      3117,
+      1650
+    ],
+    [
+      7702,
+      1966
+    ],
+    [
+      8750,
+      4652
+    ]
+  ],
+  "intersection_positions_wide": [
+    [
+      534.4,
+      797.0
+    ],
+    [
+      770.2,
+      386.2
+    ],
+    [
+      246.2,
+      860.2
+    ],
+    [
+      311.7,
+      165.0
+    ],
+    [
+      770.2,
+      196.6
+    ],
+    [
+      875.0,
+      465.2
+    ]
+  ],
+  "hierarchical_network": {
+    "large_nodes_physical": [
+      [
+        2604,
+        6070
+      ],
+      [
+        5104,
+        2070
+      ],
+      [
+        5104,
+        8070
+      ],
+      [
+        7604,
+        2070
+      ],
+      [
+        7604,
+        8070
+      ]
+    ],
+    "large_nodes_wide": [
+      [
+        260.4,
+        607.0
+      ],
+      [
+        510.4,
+        207.0
+      ],
+      [
+        510.4,
+        807.0
+      ],
+      [
+        760.4,
+        207.0
+      ],
+      [
+        760.4,
+        807.0
+      ]
+    ],
+    "medium_nodes_physical": [
+      [
+        3777,
+        2070
+      ],
+      [
+        3777,
+        4070
+      ],
+      [
+        3777,
+        6070
+      ],
+      [
+        3777,
+        8070
+      ],
+      [
+        3659,
+        2070
+      ],
+      [
+        3659,
+        4070
+      ],
+      [
+        3659,
+        6070
+      ],
+      [
+        3659,
+        8070
+      ],
+      [
+        5998,
+        2070
+      ],
+      [
+        5998,
+        4070
+      ],
+      [
+        5998,
+        6070
+      ],
+      [
+        5998,
+        8070
+      ],
+      [
+        5856,
+        2070
+      ],
+      [
+        5856,
+        4070
+      ],
+      [
+        5856,
+        6070
+      ],
+      [
+        5856,
+        8070
+      ],
+      [
+        2604,
+        2536
+      ],
+      [
+        5104,
+        2536
+      ],
+      [
+        7604,
+        2536
+      ],
+      [
+        2604,
+        2817
+      ],
+      [
+        5104,
+        2817
+      ],
+      [
+        7604,
+        2817
+      ],
+      [
+        2604,
+        5238
+      ],
+      [
+        5104,
+        5238
+      ],
+      [
+        7604,
+        5238
+      ],
+      [
+        2604,
+        7262
+      ],
+      [
+        5104,
+        7262
+      ],
+      [
+        7604,
+        7262
+      ]
+    ],
+    "medium_nodes_wide": [
+      [
+        377.7,
+        207.0
+      ],
+      [
+        377.7,
+        407.0
+      ],
+      [
+        377.7,
+        607.0
+      ],
+      [
+        377.7,
+        807.0
+      ],
+      [
+        365.9,
+        207.0
+      ],
+      [
+        365.9,
+        407.0
+      ],
+      [
+        365.9,
+        607.0
+      ],
+      [
+        365.9,
+        807.0
+      ],
+      [
+        599.8,
+        207.0
+      ],
+      [
+        599.8,
+        407.0
+      ],
+      [
+        599.8,
+        607.0
+      ],
+      [
+        599.8,
+        807.0
+      ],
+      [
+        585.6,
+        207.0
+      ],
+      [
+        585.6,
+        407.0
+      ],
+      [
+        585.6,
+        607.0
+      ],
+      [
+        585.6,
+        807.0
+      ],
+      [
+        260.4,
+        253.6
+      ],
+      [
+        510.4,
+        253.6
+      ],
+      [
+        760.4,
+        253.6
+      ],
+      [
+        260.4,
+        281.7
+      ],
+      [
+        510.4,
+        281.7
+      ],
+      [
+        760.4,
+        281.7
+      ],
+      [
+        260.4,
+        523.8
+      ],
+      [
+        510.4,
+        523.8
+      ],
+      [
+        760.4,
+        523.8
+      ],
+      [
+        260.4,
+        726.2
+      ],
+      [
+        510.4,
+        726.2
+      ],
+      [
+        760.4,
+        726.2
+      ]
+    ]
+  },
+  "selected_defects": [
+    "angle_tilt"
+  ],
+  "defect_parameters": {
+    "angle_tilt_deg": -1.3472
+  },
+  "files": {
+    "reference_clean": "navigation_dataset\\run_15af761440ce113f6d5c99ee4c809e86\\reference_clean.png",
+    "wide_search_clean": "navigation_dataset\\run_15af761440ce113f6d5c99ee4c809e86\\wide_search_clean.png",
+    "wide_search_defective": "navigation_dataset\\run_15af761440ce113f6d5c99ee4c809e86\\wide_search_defective.png",
+    "reference_location_ground_truth": "navigation_dataset\\run_15af761440ce113f6d5c99ee4c809e86\\reference_location_ground_truth.png"
+  }
+}

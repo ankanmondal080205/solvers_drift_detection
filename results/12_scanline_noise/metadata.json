@@ -1,0 +1,281 @@
+{
+  "seed": "168859212754205285527613864760710874541",
+  "technology": "DRAM",
+  "architecture": "large regular DRAM sub-arrays",
+  "architecture_id": 0,
+  "reference_size": [
+    1000,
+    1000
+  ],
+  "wide_search_size": [
+    1000,
+    1000
+  ],
+  "physical_layout_size": [
+    10000,
+    10000
+  ],
+  "physical_scale_ratio": "10:1",
+  "reference_crop_in_physical_layout": [
+    4730,
+    8388,
+    1000,
+    1000
+  ],
+  "reference_expected_location_in_wide_search": [
+    473.0,
+    838.8,
+    100.0,
+    100.0
+  ],
+  "reference_ground_truth_box_xyxy": [
+    473,
+    839,
+    572,
+    938
+  ],
+  "reference_locations_ground_truth_count": 1,
+  "reference_locations_ground_truth_xyxy": [
+    [
+      473,
+      839,
+      572,
+      938
+    ]
+  ],
+  "repetition_increase": {
+    "generated_during_wide_image_creation": false,
+    "reference_count": 1,
+    "locations_wide_xywh": [
+      [
+        473.0,
+        838.8,
+        100.0,
+        100.0
+      ]
+    ]
+  },
+  "ground_truth_visualization": {
+    "description": "The reference location is outlined in reference_location_ground_truth.png.",
+    "box_format": "xyxy",
+    "box": [
+      473,
+      839,
+      572,
+      938
+    ]
+  },
+  "global_bit_pitch": 144,
+  "global_word_pitch": 164,
+  "intersection_count": 5,
+  "intersection_positions_physical": [
+    [
+      6391,
+      1862
+    ],
+    [
+      1495,
+      8586
+    ],
+    [
+      7975,
+      3174
+    ],
+    [
+      6679,
+      3502
+    ],
+    [
+      4807,
+      5142
+    ]
+  ],
+  "intersection_positions_wide": [
+    [
+      639.1,
+      186.2
+    ],
+    [
+      149.5,
+      858.6
+    ],
+    [
+      797.5,
+      317.4
+    ],
+    [
+      667.9,
+      350.2
+    ],
+    [
+      480.7,
+      514.2
+    ]
+  ],
+  "hierarchical_network": {
+    "large_nodes_physical": [
+      [
+        2555,
+        5058
+      ],
+      [
+        5055,
+        2558
+      ],
+      [
+        7555,
+        2558
+      ]
+    ],
+    "large_nodes_wide": [
+      [
+        255.5,
+        505.8
+      ],
+      [
+        505.5,
+        255.8
+      ],
+      [
+        755.5,
+        255.8
+      ]
+    ],
+    "medium_nodes_physical": [
+      [
+        3414,
+        2558
+      ],
+      [
+        3414,
+        5058
+      ],
+      [
+        3414,
+        7558
+      ],
+      [
+        6595,
+        2558
+      ],
+      [
+        6595,
+        5058
+      ],
+      [
+        6595,
+        7558
+      ],
+      [
+        2555,
+        4477
+      ],
+      [
+        5055,
+        4477
+      ],
+      [
+        7555,
+        4477
+      ],
+      [
+        2555,
+        4046
+      ],
+      [
+        5055,
+        4046
+      ],
+      [
+        7555,
+        4046
+      ],
+      [
+        2555,
+        6644
+      ],
+      [
+        5055,
+        6644
+      ],
+      [
+        7555,
+        6644
+      ]
+    ],
+    "medium_nodes_wide": [
+      [
+        341.4,
+        255.8
+      ],
+      [
+        341.4,
+        505.8
+      ],
+      [
+        341.4,
+        755.8
+      ],
+      [
+        659.5,
+        255.8
+      ],
+      [
+        659.5,
+        505.8
+      ],
+      [
+        659.5,
+        755.8
+      ],
+      [
+        255.5,
+        447.7
+      ],
+      [
+        505.5,
+        447.7
+      ],
+      [
+        755.5,
+        447.7
+      ],
+      [
+        255.5,
+        404.6
+      ],
+      [
+        505.5,
+        404.6
+      ],
+      [
+        755.5,
+        404.6
+      ],
+      [
+        255.5,
+        664.4
+      ],
+      [
+        505.5,
+        664.4
+      ],
+      [
+        755.5,
+        664.4
+      ]
+    ]
+  },
+  "selected_defects": [
+    "scanline_noise"
+  ],
+  "defect_parameters": {
+    "scanline_noise": "applied"
+  },
+  "files": {
+    "reference_clean": "navigation_dataset\\run_7f0919f6d9dd8d2ce7992496064945ad\\reference_clean.png",
+    "wide_search_clean": "navigation_dataset\\run_7f0919f6d9dd8d2ce7992496064945ad\\wide_search_clean.png",
+    "wide_search_defective": "navigation_dataset\\run_7f0919f6d9dd8d2ce7992496064945ad\\wide_search_defective.png",
+    "reference_location_ground_truth": "navigation_dataset\\run_7f0919f6d9dd8d2ce7992496064945ad\\reference_location_ground_truth.png"
+  }
+}

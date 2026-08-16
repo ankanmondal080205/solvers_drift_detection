@@ -1,0 +1,538 @@
+{
+  "seed": "75882570539555012294526516058842265558",
+  "technology": "DRAM",
+  "architecture": "sparse large-pitch DRAM banks",
+  "architecture_id": 3,
+  "reference_size": [
+    1000,
+    1000
+  ],
+  "wide_search_size": [
+    1000,
+    1000
+  ],
+  "physical_layout_size": [
+    10000,
+    10000
+  ],
+  "physical_scale_ratio": "10:1",
+  "reference_crop_in_physical_layout": [
+    7176,
+    3742,
+    1000,
+    1000
+  ],
+  "reference_expected_location_in_wide_search": [
+    717.6,
+    374.2,
+    100.0,
+    100.0
+  ],
+  "reference_ground_truth_box_xyxy": [
+    718,
+    374,
+    817,
+    473
+  ],
+  "reference_locations_ground_truth_count": 4,
+  "reference_locations_ground_truth_xyxy": [
+    [
+      718,
+      374,
+      817,
+      473
+    ],
+    [
+      758,
+      690,
+      857,
+      789
+    ],
+    [
+      781,
+      555,
+      880,
+      654
+    ],
+    [
+      250,
+      569,
+      349,
+      668
+    ]
+  ],
+  "repetition_increase": {
+    "generated_during_wide_image_creation": true,
+    "reference_count": 4,
+    "locations_wide_xywh": [
+      [
+        717.6,
+        374.2,
+        100.0,
+        100.0
+      ],
+      [
+        758.0,
+        690.0,
+        100.0,
+        100.0
+      ],
+      [
+        781.0,
+        555.0,
+        100.0,
+        100.0
+      ],
+      [
+        250.0,
+        569.0,
+        100.0,
+        100.0
+      ]
+    ]
+  },
+  "ground_truth_visualization": {
+    "description": "All known reference locations are outlined and numbered in reference_location_ground_truth.png.",
+    "box_format": "xyxy",
+    "box": [
+      718,
+      374,
+      817,
+      473
+    ]
+  },
+  "global_bit_pitch": 125,
+  "global_word_pitch": 140,
+  "intersection_count": 9,
+  "intersection_positions_physical": [
+    [
+      808,
+      8467
+    ],
+    [
+      6558,
+      5527
+    ],
+    [
+      7183,
+      8047
+    ],
+    [
+      5433,
+      7347
+    ],
+    [
+      8308,
+      5807
+    ],
+    [
+      5558,
+      5107
+    ],
+    [
+      933,
+      5807
+    ],
+    [
+      8558,
+      1047
+    ],
+    [
+      5558,
+      2727
+    ]
+  ],
+  "intersection_positions_wide": [
+    [
+      80.8,
+      846.7
+    ],
+    [
+      655.8,
+      552.7
+    ],
+    [
+      718.3,
+      804.7
+    ],
+    [
+      543.3,
+      734.7
+    ],
+    [
+      830.8,
+      580.7
+    ],
+    [
+      555.8,
+      510.7
+    ],
+    [
+      93.3,
+      580.7
+    ],
+    [
+      855.8,
+      104.7
+    ],
+    [
+      555.8,
+      272.7
+    ]
+  ],
+  "hierarchical_network": {
+    "large_nodes_physical": [
+      [
+        2058,
+        5067
+      ],
+      [
+        4058,
+        2567
+      ],
+      [
+        4058,
+        5067
+      ],
+      [
+        6058,
+        2567
+      ],
+      [
+        8058,
+        5067
+      ]
+    ],
+    "large_nodes_wide": [
+      [
+        205.8,
+        506.7
+      ],
+      [
+        405.8,
+        256.7
+      ],
+      [
+        405.8,
+        506.7
+      ],
+      [
+        605.8,
+        256.7
+      ],
+      [
+        805.8,
+        506.7
+      ]
+    ],
+    "medium_nodes_physical": [
+      [
+        3301,
+        2567
+      ],
+      [
+        3301,
+        5067
+      ],
+      [
+        3301,
+        7567
+      ],
+      [
+        3489,
+        2567
+      ],
+      [
+        3489,
+        5067
+      ],
+      [
+        3489,
+        7567
+      ],
+      [
+        4701,
+        2567
+      ],
+      [
+        4701,
+        5067
+      ],
+      [
+        4701,
+        7567
+      ],
+      [
+        5247,
+        2567
+      ],
+      [
+        5247,
+        5067
+      ],
+      [
+        5247,
+        7567
+      ],
+      [
+        7525,
+        2567
+      ],
+      [
+        7525,
+        5067
+      ],
+      [
+        7525,
+        7567
+      ],
+      [
+        2058,
+        3648
+      ],
+      [
+        4058,
+        3648
+      ],
+      [
+        6058,
+        3648
+      ],
+      [
+        8058,
+        3648
+      ],
+      [
+        2058,
+        4405
+      ],
+      [
+        4058,
+        4405
+      ],
+      [
+        6058,
+        4405
+      ],
+      [
+        8058,
+        4405
+      ],
+      [
+        2058,
+        6576
+      ],
+      [
+        4058,
+        6576
+      ],
+      [
+        6058,
+        6576
+      ],
+      [
+        8058,
+        6576
+      ],
+      [
+        2058,
+        6435
+      ],
+      [
+        4058,
+        6435
+      ],
+      [
+        6058,
+        6435
+      ],
+      [
+        8058,
+        6435
+      ]
+    ],
+    "medium_nodes_wide": [
+      [
+        330.1,
+        256.7
+      ],
+      [
+        330.1,
+        506.7
+      ],
+      [
+        330.1,
+        756.7
+      ],
+      [
+        348.9,
+        256.7
+      ],
+      [
+        348.9,
+        506.7
+      ],
+      [
+        348.9,
+        756.7
+      ],
+      [
+        470.1,
+        256.7
+      ],
+      [
+        470.1,
+        506.7
+      ],
+      [
+        470.1,
+        756.7
+      ],
+      [
+        524.7,
+        256.7
+      ],
+      [
+        524.7,
+        506.7
+      ],
+      [
+        524.7,
+        756.7
+      ],
+      [
+        752.5,
+        256.7
+      ],
+      [
+        752.5,
+        506.7
+      ],
+      [
+        752.5,
+        756.7
+      ],
+      [
+        205.8,
+        364.8
+      ],
+      [
+        405.8,
+        364.8
+      ],
+      [
+        605.8,
+        364.8
+      ],
+      [
+        805.8,
+        364.8
+      ],
+      [
+        205.8,
+        440.5
+      ],
+      [
+        405.8,
+        440.5
+      ],
+      [
+        605.8,
+        440.5
+      ],
+      [
+        805.8,
+        440.5
+      ],
+      [
+        205.8,
+        657.6
+      ],
+      [
+        405.8,
+        657.6
+      ],
+      [
+        605.8,
+        657.6
+      ],
+      [
+        805.8,
+        657.6
+      ],
+      [
+        205.8,
+        643.5
+      ],
+      [
+        405.8,
+        643.5
+      ],
+      [
+        605.8,
+        643.5
+      ],
+      [
+        805.8,
+        643.5
+      ]
+    ]
+  },
+  "selected_defects": [
+    "blur",
+    "repetition_increase",
+    "edge_stress"
+  ],
+  "defect_parameters": {
+    "blur": "applied",
+    "edge_stress": "applied",
+    "repetition_increase": {
+      "generated_during_wide_image_creation": true,
+      "reference_count": 4,
+      "locations": [
+        {
+          "x": 717.6,
+          "y": 374.2,
+          "width": 100.0,
+          "height": 100.0,
+          "center_x": 767.6,
+          "center_y": 424.2,
+          "is_original": true
+        },
+        {
+          "x": 758,
+          "y": 690,
+          "width": 100,
+          "height": 100,
+          "center_x": 808.0,
+          "center_y": 740.0,
+          "is_original": false
+        },
+        {
+          "x": 781,
+          "y": 555,
+          "width": 100,
+          "height": 100,
+          "center_x": 831.0,
+          "center_y": 605.0,
+          "is_original": false
+        },
+        {
+          "x": 250,
+          "y": 569,
+          "width": 100,
+          "height": 100,
+          "center_x": 300.0,
+          "center_y": 619.0,
+          "is_original": false
+        }
+      ]
+    }
+  },
+  "files": {
+    "reference_clean": "navigation_dataset\\run_3916739494cf726333d5cc488f2cf7d6\\reference_clean.png",
+    "wide_search_clean": "navigation_dataset\\run_3916739494cf726333d5cc488f2cf7d6\\wide_search_clean.png",
+    "wide_search_defective": "navigation_dataset\\run_3916739494cf726333d5cc488f2cf7d6\\wide_search_defective.png",
+    "reference_location_ground_truth": "navigation_dataset\\run_3916739494cf726333d5cc488f2cf7d6\\reference_location_ground_truth.png"
+  }
+}

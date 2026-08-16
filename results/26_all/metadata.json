@@ -1,0 +1,484 @@
+{
+  "seed": "7035885882232916905980426957117668631",
+  "technology": "DRAM",
+  "architecture": "staggered DRAM banks",
+  "architecture_id": 1,
+  "reference_size": [
+    1000,
+    1000
+  ],
+  "wide_search_size": [
+    1000,
+    1000
+  ],
+  "physical_layout_size": [
+    10000,
+    10000
+  ],
+  "physical_scale_ratio": "10:1",
+  "reference_crop_in_physical_layout": [
+    889,
+    3986,
+    1000,
+    1000
+  ],
+  "reference_expected_location_in_wide_search": [
+    88.9,
+    398.6,
+    100.0,
+    100.0
+  ],
+  "reference_ground_truth_box_xyxy": [
+    89,
+    399,
+    188,
+    498
+  ],
+  "reference_locations_ground_truth_count": 2,
+  "reference_locations_ground_truth_xyxy": [
+    [
+      89,
+      399,
+      188,
+      498
+    ],
+    [
+      228,
+      561,
+      327,
+      660
+    ]
+  ],
+  "repetition_increase": {
+    "generated_during_wide_image_creation": true,
+    "reference_count": 2,
+    "locations_wide_xywh": [
+      [
+        88.9,
+        398.6,
+        100.0,
+        100.0
+      ],
+      [
+        228.0,
+        561.0,
+        100.0,
+        100.0
+      ]
+    ]
+  },
+  "ground_truth_visualization": {
+    "description": "All known reference locations are outlined and numbered in reference_location_ground_truth.png.",
+    "box_format": "xyxy",
+    "box": [
+      89,
+      399,
+      188,
+      498
+    ]
+  },
+  "global_bit_pitch": 143,
+  "global_word_pitch": 144,
+  "intersection_count": 5,
+  "intersection_positions_physical": [
+    [
+      4077,
+      6965
+    ],
+    [
+      7223,
+      5813
+    ],
+    [
+      7652,
+      4373
+    ],
+    [
+      5650,
+      8261
+    ],
+    [
+      6079,
+      6101
+    ]
+  ],
+  "intersection_positions_wide": [
+    [
+      407.7,
+      696.5
+    ],
+    [
+      722.3,
+      581.3
+    ],
+    [
+      765.2,
+      437.3
+    ],
+    [
+      565.0,
+      826.1
+    ],
+    [
+      607.9,
+      610.1
+    ]
+  ],
+  "hierarchical_network": {
+    "large_nodes_physical": [
+      [
+        2573,
+        2053
+      ],
+      [
+        2573,
+        4053
+      ],
+      [
+        2573,
+        6053
+      ],
+      [
+        5073,
+        6053
+      ],
+      [
+        7573,
+        2053
+      ],
+      [
+        7573,
+        6053
+      ]
+    ],
+    "large_nodes_wide": [
+      [
+        257.3,
+        205.3
+      ],
+      [
+        257.3,
+        405.3
+      ],
+      [
+        257.3,
+        605.3
+      ],
+      [
+        507.3,
+        605.3
+      ],
+      [
+        757.3,
+        205.3
+      ],
+      [
+        757.3,
+        605.3
+      ]
+    ],
+    "medium_nodes_physical": [
+      [
+        3485,
+        2053
+      ],
+      [
+        3485,
+        4053
+      ],
+      [
+        3485,
+        6053
+      ],
+      [
+        3485,
+        8053
+      ],
+      [
+        3422,
+        2053
+      ],
+      [
+        3422,
+        4053
+      ],
+      [
+        3422,
+        6053
+      ],
+      [
+        3422,
+        8053
+      ],
+      [
+        7013,
+        2053
+      ],
+      [
+        7013,
+        4053
+      ],
+      [
+        7013,
+        6053
+      ],
+      [
+        7013,
+        8053
+      ],
+      [
+        6329,
+        2053
+      ],
+      [
+        6329,
+        4053
+      ],
+      [
+        6329,
+        6053
+      ],
+      [
+        6329,
+        8053
+      ],
+      [
+        2573,
+        3022
+      ],
+      [
+        5073,
+        3022
+      ],
+      [
+        7573,
+        3022
+      ],
+      [
+        2573,
+        3349
+      ],
+      [
+        5073,
+        3349
+      ],
+      [
+        7573,
+        3349
+      ],
+      [
+        2573,
+        4652
+      ],
+      [
+        5073,
+        4652
+      ],
+      [
+        7573,
+        4652
+      ],
+      [
+        2573,
+        6524
+      ],
+      [
+        5073,
+        6524
+      ],
+      [
+        7573,
+        6524
+      ],
+      [
+        2573,
+        6553
+      ],
+      [
+        5073,
+        6553
+      ],
+      [
+        7573,
+        6553
+      ]
+    ],
+    "medium_nodes_wide": [
+      [
+        348.5,
+        205.3
+      ],
+      [
+        348.5,
+        405.3
+      ],
+      [
+        348.5,
+        605.3
+      ],
+      [
+        348.5,
+        805.3
+      ],
+      [
+        342.2,
+        205.3
+      ],
+      [
+        342.2,
+        405.3
+      ],
+      [
+        342.2,
+        605.3
+      ],
+      [
+        342.2,
+        805.3
+      ],
+      [
+        701.3,
+        205.3
+      ],
+      [
+        701.3,
+        405.3
+      ],
+      [
+        701.3,
+        605.3
+      ],
+      [
+        701.3,
+        805.3
+      ],
+      [
+        632.9,
+        205.3
+      ],
+      [
+        632.9,
+        405.3
+      ],
+      [
+        632.9,
+        605.3
+      ],
+      [
+        632.9,
+        805.3
+      ],
+      [
+        257.3,
+        302.2
+      ],
+      [
+        507.3,
+        302.2
+      ],
+      [
+        757.3,
+        302.2
+      ],
+      [
+        257.3,
+        334.9
+      ],
+      [
+        507.3,
+        334.9
+      ],
+      [
+        757.3,
+        334.9
+      ],
+      [
+        257.3,
+        465.2
+      ],
+      [
+        507.3,
+        465.2
+      ],
+      [
+        757.3,
+        465.2
+      ],
+      [
+        257.3,
+        652.4
+      ],
+      [
+        507.3,
+        652.4
+      ],
+      [
+        757.3,
+        652.4
+      ],
+      [
+        257.3,
+        655.3
+      ],
+      [
+        507.3,
+        655.3
+      ],
+      [
+        757.3,
+        655.3
+      ]
+    ]
+  },
+  "selected_defects": [
+    "blur",
+    "angle_tilt",
+    "repetition_increase",
+    "edge_stress",
+    "scale_mismatch",
+    "scanline_noise",
+    "line_dropouts",
+    "brightness_drift",
+    "white_tint"
+  ],
+  "defect_parameters": {
+    "blur": "applied",
+    "angle_tilt_deg": 0.3825,
+    "edge_stress": "applied",
+    "scale_ratio": 10.0934,
+    "scanline_noise": "applied",
+    "line_dropouts": "applied",
+    "brightness_drift": "applied",
+    "white_tint": "applied",
+    "repetition_increase": {
+      "generated_during_wide_image_creation": true,
+      "reference_count": 2,
+      "locations": [
+        {
+          "x": 88.9,
+          "y": 398.6,
+          "width": 100.0,
+          "height": 100.0,
+          "center_x": 138.9,
+          "center_y": 448.6,
+          "is_original": true
+        },
+        {
+          "x": 228,
+          "y": 561,
+          "width": 100,
+          "height": 100,
+          "center_x": 278.0,
+          "center_y": 611.0,
+          "is_original": false
+        }
+      ]
+    }
+  },
+  "files": {
+    "reference_clean": "navigation_dataset\\run_054b0ff4e5be9fad9e21a609483b3d17\\reference_clean.png",
+    "wide_search_clean": "navigation_dataset\\run_054b0ff4e5be9fad9e21a609483b3d17\\wide_search_clean.png",
+    "wide_search_defective": "navigation_dataset\\run_054b0ff4e5be9fad9e21a609483b3d17\\wide_search_defective.png",
+    "reference_location_ground_truth": "navigation_dataset\\run_054b0ff4e5be9fad9e21a609483b3d17\\reference_location_ground_truth.png"
+  }
+}

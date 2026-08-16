@@ -1,0 +1,545 @@
+{
+  "seed": "202578826208153586415096311301830204971",
+  "technology": "DRAM",
+  "architecture": "staggered DRAM banks",
+  "architecture_id": 1,
+  "reference_size": [
+    1000,
+    1000
+  ],
+  "wide_search_size": [
+    1000,
+    1000
+  ],
+  "physical_layout_size": [
+    10000,
+    10000
+  ],
+  "physical_scale_ratio": "10:1",
+  "reference_crop_in_physical_layout": [
+    6082,
+    6259,
+    1000,
+    1000
+  ],
+  "reference_expected_location_in_wide_search": [
+    608.2,
+    625.9,
+    100.0,
+    100.0
+  ],
+  "reference_ground_truth_box_xyxy": [
+    608,
+    626,
+    707,
+    725
+  ],
+  "reference_locations_ground_truth_count": 3,
+  "reference_locations_ground_truth_xyxy": [
+    [
+      608,
+      626,
+      707,
+      725
+    ],
+    [
+      506,
+      19,
+      605,
+      118
+    ],
+    [
+      94,
+      344,
+      193,
+      443
+    ]
+  ],
+  "repetition_increase": {
+    "generated_during_wide_image_creation": true,
+    "reference_count": 3,
+    "locations_wide_xywh": [
+      [
+        608.2,
+        625.9,
+        100.0,
+        100.0
+      ],
+      [
+        506.0,
+        19.0,
+        100.0,
+        100.0
+      ],
+      [
+        94.0,
+        344.0,
+        100.0,
+        100.0
+      ]
+    ]
+  },
+  "ground_truth_visualization": {
+    "description": "All known reference locations are outlined and numbered in reference_location_ground_truth.png.",
+    "box_format": "xyxy",
+    "box": [
+      608,
+      626,
+      707,
+      725
+    ]
+  },
+  "global_bit_pitch": 137,
+  "global_word_pitch": 151,
+  "intersection_count": 6,
+  "intersection_positions_physical": [
+    [
+      903,
+      789
+    ],
+    [
+      1040,
+      5017
+    ],
+    [
+      5424,
+      6678
+    ],
+    [
+      5561,
+      3809
+    ],
+    [
+      8575,
+      2450
+    ],
+    [
+      6520,
+      1544
+    ]
+  ],
+  "intersection_positions_wide": [
+    [
+      90.3,
+      78.9
+    ],
+    [
+      104.0,
+      501.7
+    ],
+    [
+      542.4,
+      667.8
+    ],
+    [
+      556.1,
+      380.9
+    ],
+    [
+      857.5,
+      245.0
+    ],
+    [
+      652.0,
+      154.4
+    ]
+  ],
+  "hierarchical_network": {
+    "large_nodes_physical": [
+      [
+        2081,
+        6034
+      ],
+      [
+        2081,
+        8034
+      ],
+      [
+        4081,
+        4034
+      ],
+      [
+        4081,
+        6034
+      ],
+      [
+        8081,
+        6034
+      ]
+    ],
+    "large_nodes_wide": [
+      [
+        208.1,
+        603.4
+      ],
+      [
+        208.1,
+        803.4
+      ],
+      [
+        408.1,
+        403.4
+      ],
+      [
+        408.1,
+        603.4
+      ],
+      [
+        808.1,
+        603.4
+      ]
+    ],
+    "medium_nodes_physical": [
+      [
+        2964,
+        2034
+      ],
+      [
+        2964,
+        4034
+      ],
+      [
+        2964,
+        6034
+      ],
+      [
+        2964,
+        8034
+      ],
+      [
+        3238,
+        2034
+      ],
+      [
+        3238,
+        4034
+      ],
+      [
+        3238,
+        6034
+      ],
+      [
+        3238,
+        8034
+      ],
+      [
+        4744,
+        2034
+      ],
+      [
+        4744,
+        4034
+      ],
+      [
+        4744,
+        6034
+      ],
+      [
+        4744,
+        8034
+      ],
+      [
+        4942,
+        2034
+      ],
+      [
+        4942,
+        4034
+      ],
+      [
+        4942,
+        6034
+      ],
+      [
+        4942,
+        8034
+      ],
+      [
+        7146,
+        2034
+      ],
+      [
+        7146,
+        4034
+      ],
+      [
+        7146,
+        6034
+      ],
+      [
+        7146,
+        8034
+      ],
+      [
+        2081,
+        2944
+      ],
+      [
+        4081,
+        2944
+      ],
+      [
+        6081,
+        2944
+      ],
+      [
+        8081,
+        2944
+      ],
+      [
+        2081,
+        4746
+      ],
+      [
+        4081,
+        4746
+      ],
+      [
+        6081,
+        4746
+      ],
+      [
+        8081,
+        4746
+      ],
+      [
+        2081,
+        5430
+      ],
+      [
+        4081,
+        5430
+      ],
+      [
+        6081,
+        5430
+      ],
+      [
+        8081,
+        5430
+      ],
+      [
+        2081,
+        7047
+      ],
+      [
+        4081,
+        7047
+      ],
+      [
+        6081,
+        7047
+      ],
+      [
+        8081,
+        7047
+      ]
+    ],
+    "medium_nodes_wide": [
+      [
+        296.4,
+        203.4
+      ],
+      [
+        296.4,
+        403.4
+      ],
+      [
+        296.4,
+        603.4
+      ],
+      [
+        296.4,
+        803.4
+      ],
+      [
+        323.8,
+        203.4
+      ],
+      [
+        323.8,
+        403.4
+      ],
+      [
+        323.8,
+        603.4
+      ],
+      [
+        323.8,
+        803.4
+      ],
+      [
+        474.4,
+        203.4
+      ],
+      [
+        474.4,
+        403.4
+      ],
+      [
+        474.4,
+        603.4
+      ],
+      [
+        474.4,
+        803.4
+      ],
+      [
+        494.2,
+        203.4
+      ],
+      [
+        494.2,
+        403.4
+      ],
+      [
+        494.2,
+        603.4
+      ],
+      [
+        494.2,
+        803.4
+      ],
+      [
+        714.6,
+        203.4
+      ],
+      [
+        714.6,
+        403.4
+      ],
+      [
+        714.6,
+        603.4
+      ],
+      [
+        714.6,
+        803.4
+      ],
+      [
+        208.1,
+        294.4
+      ],
+      [
+        408.1,
+        294.4
+      ],
+      [
+        608.1,
+        294.4
+      ],
+      [
+        808.1,
+        294.4
+      ],
+      [
+        208.1,
+        474.6
+      ],
+      [
+        408.1,
+        474.6
+      ],
+      [
+        608.1,
+        474.6
+      ],
+      [
+        808.1,
+        474.6
+      ],
+      [
+        208.1,
+        543.0
+      ],
+      [
+        408.1,
+        543.0
+      ],
+      [
+        608.1,
+        543.0
+      ],
+      [
+        808.1,
+        543.0
+      ],
+      [
+        208.1,
+        704.7
+      ],
+      [
+        408.1,
+        704.7
+      ],
+      [
+        608.1,
+        704.7
+      ],
+      [
+        808.1,
+        704.7
+      ]
+    ]
+  },
+  "selected_defects": [
+    "blur",
+    "angle_tilt",
+    "repetition_increase",
+    "edge_stress",
+    "scale_mismatch",
+    "scanline_noise",
+    "line_dropouts",
+    "brightness_drift",
+    "white_tint"
+  ],
+  "defect_parameters": {
+    "blur": "applied",
+    "angle_tilt_deg": -1.2195,
+    "edge_stress": "applied",
+    "scale_ratio": 9.5392,
+    "scanline_noise": "applied",
+    "line_dropouts": "applied",
+    "brightness_drift": "applied",
+    "white_tint": "applied",
+    "repetition_increase": {
+      "generated_during_wide_image_creation": true,
+      "reference_count": 3,
+      "locations": [
+        {
+          "x": 608.2,
+          "y": 625.9,
+          "width": 100.0,
+          "height": 100.0,
+          "center_x": 658.2,
+          "center_y": 675.9,
+          "is_original": true
+        },
+        {
+          "x": 506,
+          "y": 19,
+          "width": 100,
+          "height": 100,
+          "center_x": 556.0,
+          "center_y": 69.0,
+          "is_original": false
+        },
+        {
+          "x": 94,
+          "y": 344,
+          "width": 100,
+          "height": 100,
+          "center_x": 144.0,
+          "center_y": 394.0,
+          "is_original": false
+        }
+      ]
+    }
+  },
+  "files": {
+    "reference_clean": "navigation_dataset\\run_9867434389edd1fb0bc97f5293cdde2b\\reference_clean.png",
+    "wide_search_clean": "navigation_dataset\\run_9867434389edd1fb0bc97f5293cdde2b\\wide_search_clean.png",
+    "wide_search_defective": "navigation_dataset\\run_9867434389edd1fb0bc97f5293cdde2b\\wide_search_defective.png",
+    "reference_location_ground_truth": "navigation_dataset\\run_9867434389edd1fb0bc97f5293cdde2b\\reference_location_ground_truth.png"
+  }
+}

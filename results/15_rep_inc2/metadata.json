@@ -1,0 +1,406 @@
+{
+  "seed": "196326773281854450843589771355870063710",
+  "technology": "DRAM",
+  "architecture": "dense vertical-bit-line DRAM",
+  "architecture_id": 2,
+  "reference_size": [
+    1000,
+    1000
+  ],
+  "wide_search_size": [
+    1000,
+    1000
+  ],
+  "physical_layout_size": [
+    10000,
+    10000
+  ],
+  "physical_scale_ratio": "10:1",
+  "reference_crop_in_physical_layout": [
+    2360,
+    4338,
+    1000,
+    1000
+  ],
+  "reference_expected_location_in_wide_search": [
+    236.0,
+    433.8,
+    100.0,
+    100.0
+  ],
+  "reference_ground_truth_box_xyxy": [
+    236,
+    434,
+    335,
+    533
+  ],
+  "reference_locations_ground_truth_count": 4,
+  "reference_locations_ground_truth_xyxy": [
+    [
+      236,
+      434,
+      335,
+      533
+    ],
+    [
+      837,
+      650,
+      936,
+      749
+    ],
+    [
+      675,
+      552,
+      774,
+      651
+    ],
+    [
+      106,
+      315,
+      205,
+      414
+    ]
+  ],
+  "repetition_increase": {
+    "generated_during_wide_image_creation": true,
+    "reference_count": 4,
+    "locations_wide_xywh": [
+      [
+        236.0,
+        433.8,
+        100.0,
+        100.0
+      ],
+      [
+        837.0,
+        650.0,
+        100.0,
+        100.0
+      ],
+      [
+        675.0,
+        552.0,
+        100.0,
+        100.0
+      ],
+      [
+        106.0,
+        315.0,
+        100.0,
+        100.0
+      ]
+    ]
+  },
+  "ground_truth_visualization": {
+    "description": "All known reference locations are outlined and numbered in reference_location_ground_truth.png.",
+    "box_format": "xyxy",
+    "box": [
+      236,
+      434,
+      335,
+      533
+    ]
+  },
+  "global_bit_pitch": 112,
+  "global_word_pitch": 105,
+  "intersection_count": 5,
+  "intersection_positions_physical": [
+    [
+      2662,
+      2070
+    ],
+    [
+      7926,
+      6060
+    ],
+    [
+      6694,
+      8055
+    ],
+    [
+      4454,
+      2490
+    ],
+    [
+      3446,
+      1860
+    ]
+  ],
+  "intersection_positions_wide": [
+    [
+      266.2,
+      207.0
+    ],
+    [
+      792.6,
+      606.0
+    ],
+    [
+      669.4,
+      805.5
+    ],
+    [
+      445.4,
+      249.0
+    ],
+    [
+      344.6,
+      186.0
+    ]
+  ],
+  "hierarchical_network": {
+    "large_nodes_physical": [
+      [
+        2586,
+        2075
+      ],
+      [
+        2586,
+        6075
+      ],
+      [
+        5086,
+        6075
+      ],
+      [
+        5086,
+        8075
+      ]
+    ],
+    "large_nodes_wide": [
+      [
+        258.6,
+        207.5
+      ],
+      [
+        258.6,
+        607.5
+      ],
+      [
+        508.6,
+        607.5
+      ],
+      [
+        508.6,
+        807.5
+      ]
+    ],
+    "medium_nodes_physical": [
+      [
+        4304,
+        2075
+      ],
+      [
+        4304,
+        4075
+      ],
+      [
+        4304,
+        6075
+      ],
+      [
+        4304,
+        8075
+      ],
+      [
+        5999,
+        2075
+      ],
+      [
+        5999,
+        4075
+      ],
+      [
+        5999,
+        6075
+      ],
+      [
+        5999,
+        8075
+      ],
+      [
+        2586,
+        3206
+      ],
+      [
+        5086,
+        3206
+      ],
+      [
+        7586,
+        3206
+      ],
+      [
+        2586,
+        4955
+      ],
+      [
+        5086,
+        4955
+      ],
+      [
+        7586,
+        4955
+      ],
+      [
+        2586,
+        5124
+      ],
+      [
+        5086,
+        5124
+      ],
+      [
+        7586,
+        5124
+      ],
+      [
+        2586,
+        6967
+      ],
+      [
+        5086,
+        6967
+      ],
+      [
+        7586,
+        6967
+      ]
+    ],
+    "medium_nodes_wide": [
+      [
+        430.4,
+        207.5
+      ],
+      [
+        430.4,
+        407.5
+      ],
+      [
+        430.4,
+        607.5
+      ],
+      [
+        430.4,
+        807.5
+      ],
+      [
+        599.9,
+        207.5
+      ],
+      [
+        599.9,
+        407.5
+      ],
+      [
+        599.9,
+        607.5
+      ],
+      [
+        599.9,
+        807.5
+      ],
+      [
+        258.6,
+        320.6
+      ],
+      [
+        508.6,
+        320.6
+      ],
+      [
+        758.6,
+        320.6
+      ],
+      [
+        258.6,
+        495.5
+      ],
+      [
+        508.6,
+        495.5
+      ],
+      [
+        758.6,
+        495.5
+      ],
+      [
+        258.6,
+        512.4
+      ],
+      [
+        508.6,
+        512.4
+      ],
+      [
+        758.6,
+        512.4
+      ],
+      [
+        258.6,
+        696.7
+      ],
+      [
+        508.6,
+        696.7
+      ],
+      [
+        758.6,
+        696.7
+      ]
+    ]
+  },
+  "selected_defects": [
+    "repetition_increase"
+  ],
+  "defect_parameters": {
+    "repetition_increase": {
+      "generated_during_wide_image_creation": true,
+      "reference_count": 4,
+      "locations": [
+        {
+          "x": 236.0,
+          "y": 433.8,
+          "width": 100.0,
+          "height": 100.0,
+          "center_x": 286.0,
+          "center_y": 483.8,
+          "is_original": true
+        },
+        {
+          "x": 837,
+          "y": 650,
+          "width": 100,
+          "height": 100,
+          "center_x": 887.0,
+          "center_y": 700.0,
+          "is_original": false
+        },
+        {
+          "x": 675,
+          "y": 552,
+          "width": 100,
+          "height": 100,
+          "center_x": 725.0,
+          "center_y": 602.0,
+          "is_original": false
+        },
+        {
+          "x": 106,
+          "y": 315,
+          "width": 100,
+          "height": 100,
+          "center_x": 156.0,
+          "center_y": 365.0,
+          "is_original": false
+        }
+      ]
+    }
+  },
+  "files": {
+    "reference_clean": "navigation_dataset\\run_93b3294171a3c088c29ae036eee1ec5e\\reference_clean.png",
+    "wide_search_clean": "navigation_dataset\\run_93b3294171a3c088c29ae036eee1ec5e\\wide_search_clean.png",
+    "wide_search_defective": "navigation_dataset\\run_93b3294171a3c088c29ae036eee1ec5e\\wide_search_defective.png",
+    "reference_location_ground_truth": "navigation_dataset\\run_93b3294171a3c088c29ae036eee1ec5e\\reference_location_ground_truth.png"
+  }
+}
