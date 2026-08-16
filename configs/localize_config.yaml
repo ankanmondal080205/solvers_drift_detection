@@ -1,0 +1,98 @@
+# ==============================================================
+# localize_config.yaml
+# Mirrors the ACTUAL hardcoded values in locate_ref_gpt_updated.py.
+#
+# IMPORTANT: this script does not currently read this file. It hardcodes
+# every value below as a module-level constant, and gets REF_PATH /
+# WIDE_PATH via two interactive input() prompts. That blocks the
+# hackathon requirement "process a pair or evaluator-provided batch
+# without manual source-code changes" -- an evaluator can't point it at
+# their own test set without either piping stdin or editing the file.
+# This file documents current behavior and doubles as the target schema
+# once the script is wired to argparse + yaml.safe_load(). See the note
+# at the bottom.
+# ==============================================================
+
+method: multi_scale_ncc_template_matching   # cv2.matchTemplate, TM_CCOEFF_NORMED
+
+io:
+  # NOT currently read from config -- gathered via input() at runtime.
+  reference_path: null
+  wide_search_path: null
+  # Output is hardcoded to <wide_search_dir>/opt/wide_search_matches_within_10pct_of_best.png
+  output_dir: null                    # currently always "opt" next to the wide-search image
+  output_filename: "wide_search_matches_within_10pct_of_best.png"
+
+preprocessing:
+  border_trim_px: 8        # BORDER_TRIM -- strips crop-edge brightening from the reference
+  grayscale: true           # cv2.IMREAD_GRAYSCALE
+
+scale_search:
+  start: 9                  # SCALE_START -- matches the 9:1-11:1 robustness range in the spec
+  end: 11                   # SCALE_END
+  step: 0.2                 # SCALE_STEP  (11 scale steps total: 9.0, 9.2, ..., 11.0)
+  min_template_px: 8        # candidate scales producing a smaller template are skipped
+
+rotation_search:
+  enabled: false             # NOT implemented -- only scale is searched, no angle sweep
+  # The problem statement explicitly allows 1-2 deg rotation; this is a
+  # known gap worth naming directly in your failure-analysis slide.
+
+peak_detection:
+  method: scipy.ndimage.maximum_filter
+  window: "max(3, template_size // 2)"   # local-max window scales with template size
+  mode: reflect
+
+scoring:
+  score_window: 0.05         # SCORE_WINDOW -- keep candidates within 5 pct points of best NCC
+                              # (module docstring calls this "10 percentage points"; the
+                              # constant is actually 0.05 -- worth reconciling before submission)
+
+deduplication:
+  nms_radius_frac_declared: 0.5   # NMS_RADIUS_FRAC constant -- declared but UNUSED in code
+  nms_radius_frac_actual: 0.35    # actual hardcoded suppression radius = 0.35 * template_size
+  max_matches_kept: 5              # MAX_MATCHES -- top-5 distinct candidates after NMS
+
+multiple_matches:
+  tie_break: closest_to_search_center   # matches the spec's required rule exactly
+
+output_visualization:
+  box_colors_by_rank:
+    - [0, 0, 255]      # red
+    - [0, 128, 255]    # orange
+    - [0, 255, 255]    # yellow
+    - [0, 255, 128]    # green
+    - [255, 128, 0]    # blue
+    - [255, 0, 255]    # magenta
+  selected_match_color: [0, 0, 255]
+  selected_match_box_thickness: 3
+  marker_type: cross
+  marker_size: 18
+
+runtime:
+  timing_method: time.perf_counter    # matches the spec's required timing disclosure
+  device: cpu                          # pure OpenCV/NumPy, no GPU path
+
+evaluation:
+  thresholds_px: [5, 4, 2, 1]          # required pass-rate thresholds (compute downstream --
+                                        # this script prints predictions but doesn't score them)
+
+# --------------------------------------------------------------
+# TO ACTUALLY WIRE THIS FILE IN:
+#   1. Add `import argparse, yaml` at the top
+#   2. Replace both input() calls with `--reference`, `--wide-search`
+#      CLI args (or a `--manifest results/manifest.csv` batch mode that
+#      loops over every row and appends predictions to a new CSV)
+#   3. Add `--config configs/localize_config.yaml`, load scale_search /
+#      score_window / max_matches_kept / border_trim_px from it instead
+#      of the module constants
+#   4. Add `--output-dir` instead of the hardcoded "opt" folder next to
+#      the wide-search image
+#   5. Add a rotation sweep (rotation_search.enabled / a deg range) if
+#      you want to close the gap called out above -- rotate the
+#      downsampled template by a few candidate angles per scale step
+#      before matchTemplate, same local-max + NMS logic already in place
+#   6. Have it emit one CSV row per processed pair (ref_path,
+#      wide_path, pred_x, pred_y, score, scale, runtime_s) so it slots
+#      straight into results/manifest.csv for the required validation report
+# --------------------------------------------------------------

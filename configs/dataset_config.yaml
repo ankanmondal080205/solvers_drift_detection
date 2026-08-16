@@ -1,0 +1,156 @@
+# ==============================================================
+# dataset_config.yaml
+# Mirrors the ACTUAL hardcoded values in ds_sg.py as of this version.
+#
+# IMPORTANT: ds_sg.py does not currently read this file. It hardcodes
+# every value below as a module-level constant, generates its own seed
+# via secrets.randbits(128), and asks for defect selection via an
+# interactive input() prompt. This file exists to (a) document the
+# generator's true behavior for the README/PPT "noise settings, scale,
+# rotation" requirement, and (b) serve as the target schema if you wire
+# the script up to argparse + yaml.safe_load() so it can run
+# non-interactively (needed for "process a batch without manual
+# source-code changes"). See the note at the bottom for what that
+# wiring would look like.
+# ==============================================================
+
+architecture: "dram"        # technology this generator produces (fixed)
+
+image:
+  size: [1000, 1000]        # SIZE constant
+  physical_scale: 10        # PHYSICAL_SCALE constant (10:1 nominal)
+  physical_layout_size: [10000, 10000]   # BIG = SIZE * PHYSICAL_SCALE
+
+seed:
+  mode: random               # actual behavior: secrets.randbits(128) every run
+  value: null                 # NOT currently settable from outside the script
+  fixed_seed_supported: false # would need code changes to accept --seed
+
+output:
+  root_dir: results/          # OUTPUT_ROOT constant
+
+dram_architecture:
+  mode: random_excl_previous
+  # architecture = rng.integers(0, 6), then re-rolled once if it equals
+  # the previous run's architecture (tracked in results/.last_dram_architecture)
+  choices:
+    0: large regular DRAM sub-arrays
+    1: staggered DRAM banks
+    2: dense vertical-bit-line DRAM
+    3: sparse large-pitch DRAM banks
+    4: sense-amplifier-heavy hierarchical DRAM
+    5: mixed DRAM bank topology
+
+background:
+  base_intensity_range: [52, 75]
+  sinusoid_amplitude_range: [1.0, 4.0]
+  sinusoid_period_range: [1800, 5200]
+
+global_routing_fabric:
+  bit_line_pitch_range: [90, 150]
+  word_line_pitch_range: [105, 165]
+  line_width_range: [3, 7]
+  line_value_range: [78, 105]
+  value_jitter: 7            # +/- applied per line
+
+local_subarray:
+  pitch_variation: [0.92, 1.08]     # correlated_pitch() multiplier range
+  value_jitter: 10                  # correlated_value() +/- range
+  bit_width_range: [6, 14]
+  word_width_range: [6, 14]
+  contact_intensity_range: [230, 245]
+  cell_intensity_range: [205, 225]
+  boundary_intensity_range: [100, 125]
+
+repetition_increase:
+  extra_instances_range: [1, 4]     # min_extra=1, max_extra=4
+  min_separation_factor: 1.25       # x max(template_h, template_w)
+  blend_alpha: 0.88
+  blend_std_weighting: [0.72, 0.28] # dst_std, ref_std mix
+
+# --------------------------------------------------------------
+# Defects — selectable interactively at runtime (serial numbers 0-11,
+# or "all_combination"). Values below are the actual randomized ranges
+# used when a defect is selected. black_tint and white_tint are mutually
+# exclusive; "all_combination" applies every defect except it randomly
+# picks ONE of black_tint/white_tint.
+# --------------------------------------------------------------
+defects:
+  available:
+    - blur
+    - angle_tilt
+    - repetition_increase
+    - edge_stress
+    - scale_mismatch
+    - black_tint
+    - white_tint
+    - scanline_noise
+    - line_dropouts
+    - brightness_drift
+    - none
+  selection_mode: interactive_input   # NOT scriptable without stdin piping or code change
+
+  blur:
+    gaussian_radius_range: [1.5, 3.0]
+
+  angle_tilt:
+    magnitude_deg_range: [0.05, 2.0]  # matches spec's "1-2 degrees" (min is smaller in practice)
+    sign: random                       # +/- with 50/50 probability
+    resample: bicubic
+    fill: median_of_image
+
+  edge_stress:
+    side: random_one_of [left, right, top, bottom]
+    band_width_px_range: [60, 160]
+    strength_range: [35, 60]
+
+  scale_mismatch:
+    ratio_range: [9, 11]               # matches spec's 9:1-11:1 robustness range
+    resample: bicubic
+
+  tint:
+    strength_range: [25, 50]
+    spatial_field_periods: [1400, 1200]   # x, y sinusoid periods
+    field_weighting: [0.65, 0.35]         # constant vs spatial component
+    black_white_mutually_exclusive: true
+
+  scanline_noise:
+    orientation_horizontal_prob: 0.75
+    n_bands_range: [3, 9]
+    coarse_baseline_std_range: [1.5, 4.0]
+    band_amplitude_range: [-14.0, 14.0]
+    within_line_modulation_amplitude: 0.15
+    modulation_freq_range: [0.5, 2.0]
+
+  line_dropouts:
+    n_dropouts_range: [2, 6]
+    double_line_prob: 0.18
+    partial_dropout_prob: 0.45
+    corruption_range: [0.75, 1.0]
+    residual_trace_prob: 0.35
+    residual_trace_range: [0.15, 0.45]
+
+  brightness_drift:
+    amplitude_range: [10.0, 28.0]
+    cycles_range: [0.45, 1.2]
+    phase_range: [0.0, 6.28319]        # 0 to 2*pi
+    monotonic_slope_range: [-12.0, 12.0]
+    spatial_weighting: [0.72, 0.28]    # vertical vs horizontal drift coordinate
+    max_shift_px_range: [-4.0, 4.0]    # dx and dy independently
+
+validation:
+  min_pairs_required: 30     # hackathon requirement, not enforced by the script itself
+
+# --------------------------------------------------------------
+# TO ACTUALLY WIRE THIS FILE IN:
+#   1. Add `import argparse, yaml` to ds_sg.py
+#   2. Replace `seed = secrets.randbits(128)` with an optional
+#      `--seed` CLI arg (falling back to secrets.randbits if unset)
+#   3. Replace the `input("\nEnter defect serial number(s): ")` call
+#      with a `--defects` CLI arg (comma list or "all_combination"),
+#      read from cfg["defects"] when not passed explicitly
+#   4. Add `--config configs/dataset_config.yaml` and `--out-dir` args
+#      so OUTPUT_ROOT is not hardcoded to results/
+#   5. Add `--n-pairs` to loop make_pair() N times instead of once,
+#      writing one manifest row per pair to results/manifest.csv
+# --------------------------------------------------------------
